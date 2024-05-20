@@ -4,7 +4,7 @@ class TasbehTabWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purpleAccent,
+      color: Colors.cyan,
     );
   }
 }
