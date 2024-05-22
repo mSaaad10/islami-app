@@ -20,14 +20,7 @@ class ChapterTitleWidget extends StatelessWidget {
       },
       child: Container(
           alignment: Alignment.center,
-          child: Text(
-            suraName,
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Monotype Koufi',
-            ),
-          )),
+          child: Text(suraName, style: Theme.of(context).textTheme.bodyMedium)),
     );
   }
 }

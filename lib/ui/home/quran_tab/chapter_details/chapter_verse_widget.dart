@@ -7,22 +7,13 @@ class ChapterVerseWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(44)),
-      child: Container(
-        padding: EdgeInsets.all(12),
-        alignment: Alignment.center,
-        child: Text(
-          verse,
+    return Container(
+      padding: EdgeInsets.all(12),
+      alignment: Alignment.center,
+      child: Text(verse,
           textAlign: TextAlign.center,
           textDirection: TextDirection.rtl,
-          style: TextStyle(
-            fontSize: 26,
-            color: Colors.black,
-          ),
-        ),
-      ),
+          style: Theme.of(context).textTheme.bodySmall),
     );
   }
 }
