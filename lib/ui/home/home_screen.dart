@@ -21,7 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/main_background.png'))),
+                image: AssetImage(ThemeMode == ThemeMode.light
+                    ? 'assets/images/main_background.png'
+                    : 'assets/images/main_background_dark.png'))),
         child: Scaffold(
           appBar: AppBar(
             title: Text('Islami'),

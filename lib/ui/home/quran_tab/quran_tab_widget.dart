@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/ui/home/quran_tab/chapter_title_widget.dart';
-import 'package:quran_app/ui/home/quran_tab/chapter_verse_Number_widget.dart';
 
 class QuranTabWidget extends StatelessWidget {
   List<String> suraNames = [
@@ -249,22 +248,19 @@ class QuranTabWidget extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: 36),
             width: double.infinity,
             height: 2,
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.tertiary,
           ),
           Container(
               padding: EdgeInsets.symmetric(vertical: 18),
               child: Text(
                 'Chapter Name',
-                style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                style: Theme.of(context).textTheme.titleMedium,
               )),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 36),
             width: double.infinity,
             height: 2,
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.tertiary,
           ),
           Expanded(
               flex: 2,
@@ -278,7 +274,7 @@ class QuranTabWidget extends StatelessWidget {
                   margin: EdgeInsets.symmetric(horizontal: 36),
                   width: double.infinity,
                   height: 2,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.tertiary,
                 ),
                 itemCount: suraNames.length,
               )),
