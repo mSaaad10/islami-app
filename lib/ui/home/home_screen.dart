@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:quran_app/ui/home/ahadeth_tab/ahadeth_tab_widget.dart';
 import 'package:quran_app/ui/home/quran_tab/quran_tab_widget.dart';
 import 'package:quran_app/ui/home/radio_tab/radio_tab_widget.dart';
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     : 'assets/images/main_background_dark.png'))),
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Islami'),
+            title: Text(AppLocalizations.of(context)!.app_name),
           ),
           backgroundColor: Colors.transparent,
           bottomNavigationBar: BottomNavigationBar(
