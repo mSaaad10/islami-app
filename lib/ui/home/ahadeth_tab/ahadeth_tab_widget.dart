@@ -36,14 +36,10 @@ class _AhadethTabWidgetState extends State<AhadethTabWidget> {
               decoration: BoxDecoration(
                   border: Border.symmetric(
                       horizontal: BorderSide(
-                          color: Theme.of(context).primaryColor, width: 2))),
-              child: Text(
-                'Ahadeth',
-                style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              )),
+                          color: Theme.of(context).colorScheme.tertiary,
+                          width: 2))),
+              child: Text('Ahadeth',
+                  style: Theme.of(context).textTheme.titleMedium)),
           // Container(
           //   width: double.infinity,
           //   height: 2,
@@ -62,9 +58,9 @@ class _AhadethTabWidgetState extends State<AhadethTabWidget> {
                     itemBuilder: (context, index) =>
                         HadethTitleWidget(hadethItem: allAHadeth[index]),
                     separatorBuilder: (context, index) => Container(
-                          width: double.infinity,
+                      width: double.infinity,
                           height: 2,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).colorScheme.tertiary,
                           margin: EdgeInsets.symmetric(horizontal: 66),
                         ),
                     itemCount: allAHadeth.length),

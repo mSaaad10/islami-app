@@ -12,7 +12,9 @@ class HadethDetailsScreen extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/images/main_background.png'))),
+              image: AssetImage(ThemeMode == ThemeMode.light
+                  ? 'assets/images/main_background.png'
+                  : 'assets/images/main_background_dark.png'))),
       child: Scaffold(
         appBar: AppBar(
           title: Text(hadethItem.hadethTitle),
@@ -22,8 +24,7 @@ class HadethDetailsScreen extends StatelessWidget {
             Expanded(
               child: Card(
                 margin: EdgeInsets.all(22),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(26)),
+                color: Theme.of(context).cardTheme.color,
                 child: Container(
                     // alignment: Alignment.center,
                     padding: EdgeInsets.all(22),
@@ -31,7 +32,7 @@ class HadethDetailsScreen extends StatelessWidget {
                         child: Text(
                       hadethItem.hadethContent,
                       textDirection: TextDirection.rtl,
-                      style: TextStyle(fontSize: 26, color: Colors.black),
+                      style: Theme.of(context).textTheme.bodySmall,
                     ))),
               ),
             ),
